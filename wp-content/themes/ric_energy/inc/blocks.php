@@ -77,5 +77,15 @@ function my_acf_init_block_types() {
             'icon'              => 'slides',
             'keywords'          => array( 'noticias', 'block' ),
         ));
+
+        acf_register_block_type(array(
+            'name'              => 'contacto',
+            'title'             => __('contacto'),
+            'description'       => __('Bloque contacto'),
+            'render_template'   => 'template-parts/blocks/contacto/index.php',
+            'category'          => 'ric_energy',
+            'icon'              => 'slides',
+            'keywords'          => array( 'contacto', 'block' ),
+        ));
     }
 }
