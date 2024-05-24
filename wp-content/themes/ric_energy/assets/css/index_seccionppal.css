@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Haskoy-Medium";
+  src: url("../fonts/Haskoy_Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Haskoy-Bold";
+  src: url("../fonts/Haskoy-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Haskoy-SemiBold";
+  src: url("../fonts/Haskoy-SemiBold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Haskoy-Regular";
+  src: url("../fonts/Haskoy-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Interstate-Condensed";
+  src: url("../fonts/Interstate_Condensed_Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.section__cabecera {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/mujer_bosque.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.section__cabecera .cabecera__vector {
+  position: absolute;
+  width: 100%;
+  height: 440px;
+  left: 0;
+  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/vector.png");
+  background-size: cover;
+  z-index: 3;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-bottom: 100px;
+  background-repeat: no-repeat;
+}
+.section__cabecera .cabecera__vector .container {
+  position: relative;
+  z-index: 4;
+  margin: 0 auto;
+  padding: 0 40px;
+  max-width: 86%;
+}
+.section__cabecera .cabecera__vector .container .vector__title {
+  width: 100%;
+  font-size: 4.5rem;
+  line-height: 1.1;
+  font-family: "Interstate-Condensed";
+  text-align: right;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 992px) {
+  .section__cabecera {
+    height: 685px;
+  }
+  .section__cabecera .cabecera__vector {
+    width: 100%;
+    height: 225px;
+    left: 0;
+    padding-bottom: 50px;
+    position: relative;
+  }
+  .section__cabecera .cabecera__vector .container {
+    padding: 0;
+  }
+  .section__cabecera .cabecera__vector .container .vector__title {
+    display: block;
+    font-size: 2.75rem;
+    text-align: center;
+  }
+  .section__cabecera .cabecera__vector .container .vector__title .mobile__cabecera {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .section__cabecera {
+    height: 511px;
+  }
+  .section__cabecera .cabecera__vector {
+    height: 295px;
+    background-position-x: right;
+  }
+}
+
+/*# sourceMappingURL=index_seccionppal.css.map */

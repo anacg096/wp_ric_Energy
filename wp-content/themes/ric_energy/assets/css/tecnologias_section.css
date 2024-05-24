@@ -1,0 +1,215 @@
+@font-face {
+  font-family: "Haskoy-Medium";
+  src: url("../fonts/Haskoy_Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Haskoy-Bold";
+  src: url("../fonts/Haskoy-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Haskoy-SemiBold";
+  src: url("../fonts/Haskoy-SemiBold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Haskoy-Regular";
+  src: url("../fonts/Haskoy-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Interstate-Condensed";
+  src: url("../fonts/Interstate_Condensed_Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.container {
+  width: 100%;
+  max-width: 1188px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.main__tecnologias {
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/base_2.png");
+  padding-bottom: 12.875rem;
+}
+.main__tecnologias .tecnologias__vector {
+  width: 100%;
+  margin-top: -1rem;
+}
+.main__tecnologias .tecnologias__container .container__title {
+  padding-top: 7.5rem;
+  margin-bottom: 5rem;
+}
+.main__tecnologias .tecnologias__container .container__title .title {
+  font-family: "Interstate-Condensed";
+  color: #98EF36;
+  font-size: 3rem;
+  line-height: 1.04;
+  font-weight: 700;
+}
+.main__tecnologias .tecnologias__container .container__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+.main__tecnologias .tecnologias__container .container__tabs .tabs__tab {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: calc(50% - 12px);
+  height: 448.6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.main__tecnologias .tecnologias__container .container__tabs .tab__title {
+  display: flex;
+  align-items: end;
+  justify-content: flex-start;
+  padding: 0 2rem;
+}
+.main__tecnologias .tecnologias__container .container__tabs .tab__title .title__tech {
+  font-family: "Haskoy-Bold";
+  color: #98EF36;
+  font-size: 1.875rem;
+  line-height: 1.23;
+}
+.main__tecnologias .tecnologias__container .container__tabs .tab__contenido {
+  font-family: "Haskoy-Medium";
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.29;
+  padding: 0 2rem;
+}
+.main__tecnologias .tecnologias__container .container__tabs .tab__button {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+}
+.main__tecnologias .tecnologias__container .container__tabs .tab__button .button__enlace {
+  text-decoration: none;
+  padding: 1.75rem 1.625rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1;
+  background-color: #98EF36;
+  border: 0;
+  color: #303030;
+  font-family: "Haskoy-Medium";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__tecnologias .tecnologias__container .container__tabs .tab__button .button__enlace:hover {
+  opacity: 0.75;
+}
+.main__tecnologias .tecnologias__container .container__tabs .tab__button .button__enlace:hover .ampliar__row {
+  transform: translateX(5px);
+}
+.main__tecnologias .tecnologias__container .container__tabs .tab__button .button__enlace .ampliar__row {
+  padding-left: 0.5rem;
+  transition: transform linear 0.2s;
+}
+.main__tecnologias .tecnologias__container .solar {
+  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/solar.png");
+}
+.main__tecnologias .tecnologias__container .hidrogeno {
+  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/hidrogeno.png");
+}
+.main__tecnologias .tecnologias__container .biogas {
+  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/biogas.png");
+}
+.main__tecnologias .tecnologias__container .almacenamiento {
+  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/almacenamiento.png");
+}
+
+@media only screen and (max-width: 1440px) {
+  .main__tecnologias .tecnologias__container .container__tabs .tabs__tab {
+    height: 448.6px;
+    background-size: contain;
+    background-position: top;
+    background-color: #126B80;
+  }
+  .main__tecnologias .tecnologias__container .container__tabs .tabs__tab .tab__title .title__tech .tech_br {
+    display: none;
+  }
+  .main__tecnologias .tecnologias__container .container__tabs .tab__contenido .tab__br {
+    display: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .main__tecnologias {
+    padding-bottom: 5rem;
+    background-position: unset;
+  }
+  .main__tecnologias .tecnologias__container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .main__tecnologias .tecnologias__container .container__title {
+    padding-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .main__tecnologias .tecnologias__container .container__title .title {
+    font-size: 2.375rem;
+  }
+  .main__tecnologias .tecnologias__container .container__tabs {
+    flex-wrap: inherit;
+    flex-direction: column;
+  }
+  .main__tecnologias .tecnologias__container .container__tabs .tabs__tab {
+    max-width: 100%;
+    height: 292px;
+    background-position: right;
+  }
+  .main__tecnologias .tecnologias__container .container__tabs .tabs__tab .tab__title {
+    width: 85%;
+  }
+  .main__tecnologias .tecnologias__container .container__tabs .tabs__tab .tab__title .title__tech {
+    font-size: 1.5rem;
+  }
+  .main__tecnologias .tecnologias__container .container__tabs .tabs__tab .tab__contenido {
+    font-size: 1.25rem;
+  }
+  .main__tecnologias .tecnologias__container .container__tabs .tab__button .button__enlace {
+    padding: 1.25rem 1.625rem;
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .main__tecnologias .tecnologias__container .container__tabs .tabs__tab {
+    height: 350px;
+  }
+  .main__tecnologias .tecnologias__container .container__tabs .tabs__tab .tab__title {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .main__tecnologias .tecnologias__container .container__tabs .tabs__tab {
+    background-size: contain;
+    background-position: top;
+  }
+  .main__tecnologias .tecnologias__container .container__tabs .tabs__tab .tab__title {
+    width: 100%;
+  }
+  .main__tecnologias .tecnologias__container .container__tabs .tabs__tab .tab__title .title__tech {
+    font-size: 1.25rem;
+  }
+  .main__tecnologias .tecnologias__container .container__tabs .tabs__tab .tab__contenido {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=tecnologias_section.css.map */
