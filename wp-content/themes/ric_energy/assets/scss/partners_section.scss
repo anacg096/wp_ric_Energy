@@ -1,0 +1,160 @@
+@import 'variables';
+@import 'functions';
+@import 'shared_styles';
+
+.main__partners {
+  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/fondo.png");
+  background-size: 100%;
+  background-repeat: repeat-y;
+  overflow-x: hidden;
+  padding-top: 133px;
+  padding-bottom: 133px;
+
+  .container {
+    .partners__encabezado {
+      //padding: 8.5rem 0 5rem;
+      width: 100%;
+      max-width: 732px;
+      margin: 0 auto;
+
+      .encabezado__title {
+        font-family: $font-interstate;
+        color: #fff;
+        font-size: rem(48);
+        font-weight: 700;
+        line-height: 1.04;
+        text-align: center;
+        margin-bottom: rem(24);
+      }
+
+      .encabezado__parrafo {
+        font-family: $font-haskoy_medium;
+        color: #fff;
+        font-size: rem(24);
+        line-height: 1.33;
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+
+    .partners__slider {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-top: rem(104);
+      margin-bottom: rem(32);
+
+      .slider__object {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .object__partner {
+          max-width: initial;
+          max-height: 100%;
+        }
+      }
+    }
+
+    .controls__slider {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+
+      .slider__arrows {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2.25vw;
+
+        .arrows__arrow {
+          .arrow__btn {
+            background-color: transparent;
+            border: 0;
+            color: #fff;
+            cursor: pointer;
+
+            .btn__img {
+              width: rem(50);
+              height: rem(40);
+            }
+          }
+
+          .opacity_partners {
+            opacity: 0.5;
+          }
+        }
+      }
+
+      .slider__progressBar {
+        width: 100%;
+        margin: 1rem 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .progressbar__section {
+          border-bottom: 2px solid #fff;
+          width: 33%;
+        }
+
+        .active_partners {
+          border-bottom: 15px solid #fff;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .main__partners {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+    background-size: 1440px;
+
+    .container {
+      .partners__encabezado {
+        max-width: 100%;
+
+        .encabezado__title {
+          font-size: rem(38);
+        }
+
+        .encabezado__parrafo {
+          font-size: rem(19);
+          font-weight: inherit;
+        }
+      }
+
+      .partners__slider {
+        //margin: 0 5.75vw;
+        margin-top: rem(30);
+
+        .slider__object {
+          .object__partner {
+            width: 21vw;
+          }
+        }
+      }
+
+      .controls__slider {
+        margin: 0 10.5vw;
+
+        .slider__progressBar {
+          margin: 0.5rem 0 0;
+        }
+
+        .slider__arrows {
+          .arrows__arrow {
+            .arrow__btn {
+              .btn__img {
+                width: rem(26);
+                height: rem(21);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

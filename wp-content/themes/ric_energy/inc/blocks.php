@@ -57,5 +57,25 @@ function my_acf_init_block_types() {
             'icon'              => 'admin-site-alt',
             'keywords'          => array( 'presencia', 'block' ),
         ));
+
+        acf_register_block_type(array(
+            'name'              => 'partners',
+            'title'             => __('partners'),
+            'description'       => __('Bloque partners'),
+            'render_template'   => 'template-parts/blocks/partners/index.php',
+            'category'          => 'ric_energy',
+            'icon'              => 'slides',
+            'keywords'          => array( 'partners', 'block' ),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'noticias',
+            'title'             => __('noticias'),
+            'description'       => __('Bloque noticias'),
+            'render_template'   => 'template-parts/blocks/noticias/index.php',
+            'category'          => 'ric_energy',
+            'icon'              => 'slides',
+            'keywords'          => array( 'noticias', 'block' ),
+        ));
     }
 }
