@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "Haskoy-Medium";
+  src: url("../fonts/Haskoy_Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Haskoy-Bold";
+  src: url("../fonts/Haskoy-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Haskoy-SemiBold";
+  src: url("../fonts/Haskoy-SemiBold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Haskoy-Regular";
+  src: url("../fonts/Haskoy-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Interstate-Condensed";
+  src: url("../fonts/Interstate_Condensed_Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.seccionppal {
+  min-height: 53vw;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  overflow: hidden;
+  width: 100%;
+  padding: 0 40px;
+}
+.seccionppal .seccionppal__breadcrumb {
+  position: absolute;
+  left: 0;
+  top: 160px;
+  width: 100%;
+  padding: 0 3.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1.5625rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  z-index: 2;
+  color: #fff;
+}
+.seccionppal .seccionppal__breadcrumb .breadcrumb__crumbItem {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-family: "Haskoy-Regular";
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #fff;
+}
+.seccionppal .seccionppal__breadcrumb .breadcrumb__crumbItem .crumbItem__enlace {
+  text-decoration: underline;
+  color: inherit;
+}
+.seccionppal .seccionppal__breadcrumb .breadcrumb__crumbItem .crumbItem__enlace,
+.seccionppal .seccionppal__breadcrumb .breadcrumb__crumbItem .crumbItem__pagina {
+  white-space: nowrap;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.seccionppal .seccionppal__breadcrumb .breadcrumb__separador {
+  content: "";
+  display: inline-block;
+  width: 4.25rem;
+  height: 1px;
+  background: #98EF36;
+  margin: 0 10px;
+}
+.seccionppal .seccionppal__vector {
+  background-color: #0F5E42;
+  width: 56vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.seccionppal .seccionppal__vector .vector__svg {
+  content: "";
+  position: absolute;
+  width: 8vw;
+  height: 100%;
+  top: 0;
+  right: -95px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+.seccionppal .seccionppal__imagen {
+  width: 56%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/sala-prensa.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.seccionppal .container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-bottom: 10%;
+  padding-top: 240px;
+  margin: 0 auto;
+  z-index: 10;
+  padding-left: 0;
+}
+.seccionppal .container .seccionppal__cabeceraText {
+  width: calc(56vw - (100vw - 1188px) / 2 - 40px);
+  padding: 0;
+  margin: 0;
+}
+.seccionppal .container .seccionppal__cabeceraText .cabeceraText__title {
+  font-family: "Interstate-Condensed";
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 1.25rem;
+}
+.seccionppal .container .seccionppal__cabeceraText .cabeceraText__parrafo {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  font-weight: 600;
+  color: #fff;
+  padding-bottom: 0;
+}
+
+@media only screen and (max-width: 1440px) {
+  .seccionppal .seccionppal__breadcrumb {
+    padding: 0 2.5rem;
+  }
+  .seccionppal .seccionppal__vector .vector__svg {
+    width: 11vw;
+  }
+  .seccionppal .container .seccionppal__cabeceraText {
+    width: 54vw;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .seccionppal .seccionppal__vector .vector__svg {
+    width: 14vw;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .seccionppal {
+    padding: 0;
+    min-height: initial;
+  }
+  .seccionppal .seccionppal__breadcrumb {
+    position: absolute;
+    left: 0;
+    top: initial;
+    bottom: 0;
+    z-index: 11;
+    display: flex;
+    overflow: auto;
+    padding: 0 1.25rem 0.625rem;
+  }
+  .seccionppal .seccionppal__breadcrumb .breadcrumb__separador {
+    width: 1.875rem;
+  }
+  .seccionppal .seccionppal__vector {
+    display: none;
+  }
+  .seccionppal .seccionppal__imagen {
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .seccionppal .container {
+    background-color: rgba(15, 94, 66, 0.6);
+    padding: 3.75rem 0;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .seccionppal .container .seccionppal__cabeceraText {
+    padding: 1.25rem;
+    width: 100%;
+  }
+  .seccionppal .container .seccionppal__cabeceraText .cabeceraText__title {
+    font-size: 3rem;
+  }
+  .seccionppal .container .seccionppal__cabeceraText .cabeceraText__parrafo {
+    margin-bottom: 0;
+    font-size: 1.125rem;
+  }
+}
+
+/*# sourceMappingURL=prensa_seccionppal.css.map */

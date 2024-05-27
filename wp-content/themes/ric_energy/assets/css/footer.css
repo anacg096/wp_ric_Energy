@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "Haskoy-Medium";
+  src: url("../fonts/Haskoy_Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Haskoy-Bold";
+  src: url("../fonts/Haskoy-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Haskoy-SemiBold";
+  src: url("../fonts/Haskoy-SemiBold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Haskoy-Regular";
+  src: url("../fonts/Haskoy-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Interstate-Condensed";
+  src: url("../fonts/Interstate_Condensed_Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.footer {
+  padding: 3.5rem 2.5vw 2rem;
+}
+.footer .footer__sectionppal {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #303030;
+  padding-bottom: 1rem;
+}
+.footer .footer__sectionppal .sectionppal__logotipo {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding-bottom: 1rem;
+}
+.footer .footer__sectionppal .sectionppal__logotipo .logotipo__ric {
+  width: 100px;
+  margin-bottom: 1.5rem;
+}
+.footer .footer__sectionppal .sectionppal__enlaces {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+.footer .footer__sectionppal .sectionppal__enlaces .enlaces__columna {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 6rem;
+  min-width: 210px;
+}
+.footer .footer__sectionppal .sectionppal__enlaces .enlaces__columna .columna__linkTitle {
+  text-decoration: none;
+}
+.footer .footer__sectionppal .sectionppal__enlaces .enlaces__columna .columna__title {
+  font-family: "Haskoy-SemiBold";
+  color: #0F5E42;
+  font-size: 1.25rem;
+  margin-bottom: 1.125rem;
+  font-weight: 600;
+  position: relative;
+}
+.footer .footer__sectionppal .sectionppal__enlaces .enlaces__columna .columna__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #0F5E42;
+  transition: width linear 0.2s;
+}
+.footer .footer__sectionppal .sectionppal__enlaces .enlaces__columna .columna__title:hover::after {
+  width: 100%;
+}
+.footer .footer__sectionppal .sectionppal__enlaces .enlaces__columna .columna__link {
+  text-decoration: none;
+  font-family: "Haskoy-Regular";
+  color: #303030;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.footer .footer__sectionFinal {
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer__sectionFinal .sectionFinal__politicas {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.footer .footer__sectionFinal .sectionFinal__politicas .politicas__bloque {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 3rem;
+}
+.footer .footer__sectionFinal .sectionFinal__politicas .politicas__bloque .bloque__enlacePoliticas {
+  text-decoration: none;
+  font-family: "Haskoy-Regular";
+  color: #303030;
+  font-size: 0.875rem;
+  position: relative;
+}
+.footer .footer__sectionFinal .sectionFinal__politicas .politicas__bloque .bloque__enlacePoliticas::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #303030;
+  transition: width linear 0.2s;
+}
+.footer .footer__sectionFinal .sectionFinal__politicas .politicas__bloque .bloque__enlacePoliticas:hover::after {
+  width: 100%;
+}
+.footer .footer__sectionFinal .sectionFinal__redesSociales {
+  width: 50%;
+  display: flex;
+  justify-content: right;
+  align-items: end;
+}
+.footer .footer__sectionFinal .sectionFinal__redesSociales .redesSociales__bloque {
+  text-decoration: none;
+}
+.footer .footer__sectionFinal .sectionFinal__redesSociales .redesSociales__bloque .bloque__enlaceRedesSociales {
+  width: 78px;
+  height: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer__sectionFinal .sectionFinal__redesSociales .instagram {
+  background-color: #14AD53;
+}
+.footer .footer__sectionFinal .sectionFinal__redesSociales .facebook {
+  background-color: #088745;
+}
+.footer .footer__sectionFinal .sectionFinal__redesSociales .twitter {
+  background-color: #0F5E42;
+}
+
+@media only screen and (max-width: 1440px) {
+  .footer {
+    padding: 2.5rem 3.5vw 2.5rem;
+  }
+  .footer .footer__sectionppal .sectionppal__enlaces .enlaces__columna {
+    margin-left: 2rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .footer {
+    padding: 2.5rem;
+  }
+  .footer .footer__sectionppal {
+    justify-content: flex-start;
+    padding-bottom: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer .footer__sectionppal .sectionppal__logotipo {
+    align-self: center;
+    padding-bottom: 0;
+  }
+  .footer .footer__sectionppal .sectionppal__logotipo .logotipo__ric {
+    width: 50px;
+    margin-bottom: 1.5rem;
+  }
+  .footer .footer__sectionppal .sectionppal__enlaces {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .footer__sectionppal .sectionppal__enlaces .enlaces__columna {
+    align-items: center;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  .footer .footer__sectionFinal {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .footer__sectionFinal .sectionFinal__politicas {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer .footer__sectionFinal .sectionFinal__politicas .politicas__bloque {
+    justify-content: center;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  .footer .footer__sectionFinal .sectionFinal__redesSociales {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

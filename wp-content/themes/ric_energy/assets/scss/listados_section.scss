@@ -1,0 +1,226 @@
+@import 'variables';
+@import 'functions';
+@import 'shared_styles';
+
+.main {
+  .main__bloqueListados {
+    width: 100%;
+    padding: 200px 40px 40px; // Se le añade más arriba para que se asemeje al de la web
+
+    .container {
+      padding: 0;
+
+      .bloqueListados__bloque {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .bloque__listItem {
+          width: 100%;
+          max-width: calc(33.3% - 15px);
+          //height: 595px;
+          height: auto; //Añadido para quitar tanto espacio debajo de la imagen
+          padding: rem(30);
+          border: 2px solid $azul-mar;
+          margin-bottom: rem(50);
+          background-color: #fff;
+          transition: all .2s linear;
+          position: relative;
+
+          &:hover {
+            background-color: $azul-cielo;
+            padding: rem(34);
+
+            .listItem__imgBox {
+              .imgBox__contenedor {
+                transform: scaleY(0.9);
+
+                .contenedor__img {
+                  transform: scale(1.2);
+                }
+              }
+            }
+          }
+
+          .listItem__date {
+            font-size: rem(18);
+            line-height: 1.44;
+            font-weight: 700;
+            color: $azul-mar;
+            font-family: $font-haskoy_regular;
+            position: relative;
+
+            .date__enlace {
+              position: relative;
+              z-index: 1;
+              color: inherit;
+              text-decoration: none;
+            }
+
+            .date__fecha {
+              font-weight: 500;
+              color: $gris-oscuro;
+            }
+          }
+
+          .listItem__title {
+            font-family: $font-interstate;
+            font-size: rem(24);
+            line-height: 1.1;
+            //font-weight: 700;
+            color: $gris-oscuro;
+            margin-top: rem(12);
+          }
+
+          .listItem__imgBox {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            margin: rem(30) 0;
+            //margin: 30px 0 0;
+
+            .imgBox__contenedor {
+              width: 100%;
+              height: 100%;
+              display: block;
+              overflow: hidden;
+              transition: all .2s linear;
+
+              .contenedor__img {
+                width: 100%;
+                max-width: 100%;
+                height: 250px;
+                object-fit: cover;
+                object-position: center center;
+                transition: all .2s linear;
+              }
+            }
+          }
+        }
+
+        .bloque__listItem:nth-child(10n+1), //Para que se apliquen los estilos al 1,11,22...
+        .bloque__listItem:nth-child(10n+7) {
+          max-width: 66%;
+        }
+
+        .bloque__listItem:nth-child(10n+1) .listItem__title,
+        .bloque__listItem:nth-child(10n+7) .listItem__title {
+          font-size: rem(32);
+        }
+
+        .bloque__listItem:nth-child(10n+1) .listItem__imgBox,
+        .bloque__listItem:nth-child(10n+7) .listItem__imgBox,
+        .bloque__listItem:nth-child(10n+1) .listItem__imgBox .imgBox__contenedor .contenedor__img,
+        .bloque__listItem:nth-child(10n+7) .listItem__imgBox .imgBox__contenedor .contenedor__img {
+          height: 300px;
+        }
+
+        .bloque__listItem:hover:nth-child(10n+1) .listItem__imgBox .imgBox__contenedor,
+        .bloque__listItem:hover:nth-child(10n+7) .listItem__imgBox .imgBox__contenedor {
+          transform: none;
+        }
+
+        .bloque__listItem:hover:nth-child(10n+1) .listItem__imgBox .imgBox__contenedor .contenedor__img,
+        .bloque__listItem:hover:nth-child(10n+7) .listItem__imgBox .imgBox__contenedor .contenedor__img {
+          transform: scale(1.2);
+        }
+
+        .bloque__listLink {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .bloqueListados__loadButton {
+        display: flex;
+        justify-content: flex-end;
+
+        .loadButton__link {
+          text-decoration: none;
+          padding: rem(28) rem(26);
+          font-size: rem(18);
+          line-height: 1;
+          font-weight: 500;
+          background: $verde-lima;
+          color: $gris-oscuro;
+          font-family: $font-haskoy_medium;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:hover {
+            background-color: $verde-hover;
+
+            .carga__row {
+              transform: translateX(5px);
+            }
+          }
+
+          .carga__row {
+            padding-left: rem(8);
+            transition: transform linear 0.2s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .main {
+    .main__bloqueListados {
+      padding: rem(72) rem(20) rem(40);
+
+      .container {
+        .bloqueListados__bloque {
+          .bloque__listItem {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            margin-bottom: rem(25);
+
+            .listItem__imgBox {
+              height: auto;
+
+              .imgBox__contenedor {
+                .contenedor__img {
+                  height: auto;
+                }
+              }
+            }
+          }
+
+          .bloque__listItem:nth-child(10n+1), //Para que se apliquen los estilos al 1,11,22...
+          .bloque__listItem:nth-child(10n+7) {
+            max-width: 100%;
+            width: 100%;
+          }
+
+          .bloque__listItem:nth-child(10n+1) .listItem__title,
+          .bloque__listItem:nth-child(10n+7) .listItem__title {
+            font-size: rem(24);
+          }
+
+          .bloque__listItem:nth-child(10n+1) .listItem__imgBox,
+          .bloque__listItem:nth-child(10n+7) .listItem__imgBox,
+          .bloque__listItem:nth-child(10n+1) .listItem__imgBox .imgBox__contenedor .contenedor__img,
+          .bloque__listItem:nth-child(10n+7) .listItem__imgBox .imgBox__contenedor .contenedor__img {
+            height: auto;
+          }
+        }
+
+        .bloqueListados__loadButton {
+          //margin-bottom: functions.rem(8);
+
+          .loadButton__link {
+            padding: rem(20) rem(26);
+            font-size: rem(16);
+          }
+        }
+      }
+    }
+  }
+}

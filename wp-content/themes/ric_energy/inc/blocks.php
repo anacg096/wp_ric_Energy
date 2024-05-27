@@ -7,6 +7,8 @@ function my_acf_init_block_types() {
     // Verifica que la función acf_register_block_type exista.
     if( function_exists('acf_register_block_type') ) {
 
+        // HOME
+
         acf_register_block_type(array(
             'name'              => 'seccionppal_home',
             'title'             => __('seccionppal_home'),
@@ -84,8 +86,30 @@ function my_acf_init_block_types() {
             'description'       => __('Bloque contacto'),
             'render_template'   => 'template-parts/blocks/contacto/index.php',
             'category'          => 'ric_energy',
-            'icon'              => 'slides',
+            'icon'              => 'testimonial',
             'keywords'          => array( 'contacto', 'block' ),
+        ));
+
+        // SALA DE PRENSA
+
+        acf_register_block_type(array(
+            'name'              => 'seccionppal_prensa',
+            'title'             => __('seccionppal_prensa'),
+            'description'       => __('Bloque sección principal de la página de prensa'),
+            'render_template'   => 'template-parts/blocks/prensa_seccionppal/index.php',
+            'category'          => 'ric_energy',
+            'icon'              => 'media-text',
+            'keywords'          => array( 'seccionppal_prensa', 'block' ),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'listados',
+            'title'             => __('listados'),
+            'description'       => __('Bloque listados'),
+            'render_template'   => 'template-parts/blocks/listados/index.php',
+            'category'          => 'ric_energy',
+            'icon'              => 'list-view',
+            'keywords'          => array( 'listados', 'block' ),
         ));
     }
 }

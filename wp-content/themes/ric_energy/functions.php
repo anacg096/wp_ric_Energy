@@ -142,6 +142,12 @@ function ric_energy_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'ric_energy_scripts' );
 
+function footerStyle() {
+    // Registrar y encolar el CSS del footer
+    wp_enqueue_style('footer-styles', get_stylesheet_directory_uri() . '/assets/css/footer.css');
+}
+add_action('wp_enqueue_scripts', 'footerStyle');
+
 //function ric_energy_widgets_init() {
 //	register_sidebar(
 //		array(
