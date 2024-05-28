@@ -117,36 +117,6 @@
 .main__nosotros .nosotros__bloques .bloques__resumen:hover .resumen__background {
   transform: translateX(0);
 }
-.main__nosotros .nosotros__bloques .pipeline {
-  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/pipeline.png");
-}
-.main__nosotros .nosotros__bloques .pipeline:hover .resumen__background {
-  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/pipeline2.jpg");
-}
-.main__nosotros .nosotros__bloques .empleados {
-  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/empleado.png");
-}
-.main__nosotros .nosotros__bloques .empleados:hover .resumen__background {
-  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/empleado2.png");
-}
-.main__nosotros .nosotros__bloques .continentes {
-  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/continentes.png");
-}
-.main__nosotros .nosotros__bloques .continentes:hover .resumen__background {
-  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/continentes2.jpg");
-}
-.main__nosotros .nosotros__bloques .paises {
-  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/paises.png");
-}
-.main__nosotros .nosotros__bloques .paises:hover .resumen__background {
-  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/paises2.jpg");
-}
-.main__nosotros .nosotros__bloques .proyectos {
-  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/proyectos.png");
-}
-.main__nosotros .nosotros__bloques .proyectos:hover .resumen__background {
-  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/proyectos2.jpg");
-}
 
 @media only screen and (max-width: 1440px) {
   .main__nosotros .nosotros__cabecera {

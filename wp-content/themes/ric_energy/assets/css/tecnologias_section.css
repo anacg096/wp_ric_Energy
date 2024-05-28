@@ -122,18 +122,6 @@
   padding-left: 0.5rem;
   transition: transform linear 0.2s;
 }
-.main__tecnologias .tecnologias__container .solar {
-  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/solar.png");
-}
-.main__tecnologias .tecnologias__container .hidrogeno {
-  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/hidrogeno.png");
-}
-.main__tecnologias .tecnologias__container .biogas {
-  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/biogas.png");
-}
-.main__tecnologias .tecnologias__container .almacenamiento {
-  background-image: url("http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/almacenamiento.png");
-}
 
 @media only screen and (max-width: 1440px) {
   .main__tecnologias .tecnologias__container .container__tabs .tabs__tab {

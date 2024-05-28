@@ -42,11 +42,15 @@ $noticias = get_field('noticias');
             <div class="slider__container">
                 <div class="container__newsInformation">
                     <div class="newsInformation__encabezado">
-                        <?php echo $noticia['encabezado']; ?>
+                        <p class="encabezado__comunicados">
+                            <?php echo $noticia['encabezado']; ?>
+                        </p>
                     </div>
                     <div class="newsInformation__line"></div>
                     <div class="newsInformation__date">
-                        <?php echo $noticia['fecha']; ?>
+                        <p class="date">
+                            <?php echo $noticia['fecha']; ?>
+                        </p>
                     </div>
                 </div>
 
@@ -56,6 +60,11 @@ $noticias = get_field('noticias');
                     </div>
                     <div class="newsContent__enlaceDiv">
                         <a class="enlaceDiv__enlace" href="<?php echo esc_url($noticia['link']['url']); ?>">
+                            <style>
+                                .<?php echo $noticia['clase']; ?> {
+                                    background-image: url('<?php echo $noticia['imagen']['url']; ?>');
+                                }
+                            </style>
                             <div class="enlace__img <?php echo $noticia['clase']; ?>">
                                 <div class="img__containerLink">
                                     <button class="containerLink__leer">

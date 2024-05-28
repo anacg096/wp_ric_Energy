@@ -19,7 +19,9 @@ $bloques = get_field('bloques');
 <section class="main__presencia">
     <div class="container">
         <div class="presencia__title">
-            <?php echo $titulo;?>
+            <h1 class="title__global">
+                <?php echo $titulo;?>
+            </h1>
         </div>
 
         <div class="presencia__sectionMapa">

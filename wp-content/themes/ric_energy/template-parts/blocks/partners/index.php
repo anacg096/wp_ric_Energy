@@ -23,7 +23,9 @@ $partners = get_field('partners');
             <h2 class="encabezado__title">
                 <?php echo $titulo;?>
             </h2>
-            <?php echo $subtitulo;?>
+            <p class="encabezado__parrafo">
+                <?php echo $subtitulo;?>
+            </p>
         </div>
 
         <div class="partners__slider slider">

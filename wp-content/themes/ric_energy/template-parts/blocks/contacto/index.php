@@ -31,7 +31,9 @@ $enlace = get_field('enlace');
             </div>
             <div class="divContenido__bloqueTexto">
                 <div class="bloqueTexto__textoEnlace" data-aos="fade-left">
-                    <?php echo $contenido;?>
+                    <p class="textoEnlace__dudas">
+                        <?php echo $contenido;?>
+                    </p>
                     <div class="textoEnlace__enlaceContacto">
                         <a class="enlaceContacto__link" href="<?php echo esc_url($enlace['url']); ?>">
                             <?php echo $enlace['title']; ?>

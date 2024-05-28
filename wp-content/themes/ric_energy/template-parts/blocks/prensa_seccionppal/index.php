@@ -10,6 +10,7 @@
 <?php
 // Obtener los campos de ACF.
 $breadcrumb_item = get_field('breadcrumb_item');
+$fondo = get_field('fondo');
 $titulo = get_field('titulo');
 $subtitulo = get_field('subtitulo');
 ?>
@@ -36,6 +37,11 @@ $subtitulo = get_field('subtitulo');
                   fill="#0f5e42"></path>
         </svg>
     </div>
+    <style>
+        .seccionppal__imagen {
+            background-image: url("<?php echo $fondo['url']; ?>");
+        }
+    </style>
     <div class="seccionppal__imagen"></div>
     <div class="container">
         <div class="seccionppal__cabeceraText">

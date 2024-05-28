@@ -97,56 +97,6 @@
         }
       }
     }
-
-    .pipeline {
-      background-image: url('http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/pipeline.png');
-
-      &:hover {
-        .resumen__background {
-          background-image: url('http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/pipeline2.jpg');
-        }
-      }
-    }
-
-    .empleados {
-      background-image: url('http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/empleado.png');
-
-      &:hover {
-        .resumen__background {
-          background-image: url('http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/empleado2.png');
-        }
-      }
-    }
-
-    .continentes {
-      background-image: url('http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/continentes.png');
-
-      &:hover {
-        .resumen__background {
-          background-image: url('http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/continentes2.jpg');
-        }
-      }
-    }
-
-    .paises {
-      background-image: url('http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/paises.png');
-
-      &:hover {
-        .resumen__background {
-          background-image: url('http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/paises2.jpg');
-        }
-      }
-    }
-
-    .proyectos {
-      background-image: url('http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/proyectos.png');
-
-      &:hover {
-        .resumen__background {
-          background-image: url('http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/proyectos2.jpg');
-        }
-      }
-    }
   }
 }
 

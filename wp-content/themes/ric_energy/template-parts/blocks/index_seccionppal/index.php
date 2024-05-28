@@ -10,7 +10,13 @@
 <?php
 // Obtener los campos de ACF.
 $contenido = get_field('contenido');
+$fondo = get_field('fondo');
 ?>
+<style>
+    .section__cabecera {
+        background-image: url("<?php echo $fondo['url']; ?>");
+    }
+</style>
 <section class="section__cabecera">
     <div class="cabecera__vector">
         <div class="container">

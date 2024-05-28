@@ -30,9 +30,16 @@ $bloques = get_field('bloques');
             <?php
             foreach ($bloques as $bloque) {
             ?>
+                <style>
+                    .<?php echo $bloque['clase']; ?> {
+                        background-image: url('<?php echo $bloque['fondo']['url']; ?>');
+                    }
+                </style>
             <div class="tabs__tab <?php echo $bloque['clase']; ?>">
                 <div class="tab__title">
-                <?php echo $bloque['titulo_bloque']; ?>
+                    <h1 class="title__tech">
+                        <?php echo $bloque['titulo_bloque']; ?>
+                    </h1>
                 </div>
                 <?php echo $bloque['contenido']; ?>
                 <div class="tab__button">
