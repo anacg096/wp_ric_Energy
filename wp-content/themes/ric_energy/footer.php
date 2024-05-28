@@ -1,5 +1,4 @@
 <?php
-wp_footer();
 // Obtener los campos de ACF.
 $logo_footer = get_field('logo_footer', 'option');
 $enlaces_footer = get_field('enlaces_footer', 'option');
@@ -84,7 +83,9 @@ $redes_sociales = get_field('redes_sociales', 'option');
         </div>
     </section>
 </footer>
-
+<?php
+wp_footer();
+?>
 </body>
 </html>
 

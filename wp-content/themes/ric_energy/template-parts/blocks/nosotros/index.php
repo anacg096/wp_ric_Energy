@@ -1,18 +1,5 @@
-<!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/nosotros_section.css">
-
-    <?php wp_head(); ?>
-</head>
-
-<body <?php body_class(); ?>>
 <?php
 // Obtener los campos de ACF.
-
 $titulo = get_field('titulo');
 $bloques = get_field('bloques');
 ?>
@@ -61,5 +48,3 @@ $bloques = get_field('bloques');
         </div>
     </div>
 </section>
-</body>
-</html>

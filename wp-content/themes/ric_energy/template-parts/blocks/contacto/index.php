@@ -1,15 +1,3 @@
-<!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/contacto_section.css">
-
-    <?php wp_head(); ?>
-</head>
-
-<body <?php body_class(); ?>>
 <?php
 // Obtener los campos de ACF.
 $titulo = get_field('titulo');
@@ -38,7 +26,7 @@ $enlace = get_field('enlace');
                         <a class="enlaceContacto__link" href="<?php echo esc_url($enlace['url']); ?>">
                             <?php echo $enlace['title']; ?>
                             <img class="contacto__row"
-                                 src="http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/row.png"
+                                 src="<?php echo get_template_directory_uri();?>/assets/images/row.png"
                                  alt="flecha"/>
                         </a>
                     </div>
@@ -46,7 +34,5 @@ $enlace = get_field('enlace');
             </div>
         </div>
     </div>
-    <img class="contacto__mountains" src="http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/mountains.png" alt="mountains"/>
+    <img class="contacto__mountains" src="<?php echo get_template_directory_uri();?>/assets/images/mountains.png" alt="mountains"/>
 </section>
-</body>
-</html>

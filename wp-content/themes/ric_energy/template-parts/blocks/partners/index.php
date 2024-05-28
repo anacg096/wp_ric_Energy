@@ -1,22 +1,14 @@
-<!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/partners_section.css">
-
-    <?php wp_head(); ?>
-</head>
-
-<body <?php body_class(); ?>>
 <?php
 // Obtener los campos de ACF.
 $titulo = get_field('titulo');
 $subtitulo = get_field('subtitulo');
 $partners = get_field('partners');
 ?>
-
+<style>
+    .main__partners {
+        background-image: url("<?php echo get_template_directory_uri();?>/assets/images/fondo.png");
+    }
+</style>
 <section class="main__partners">
     <div class="container">
         <div class="partners__encabezado" data-aos="fade-up">
@@ -50,12 +42,12 @@ $partners = get_field('partners');
             <div class="slider__arrows">
                 <div class="arrows__arrow">
                     <button id="prev_partners" class="arrow__btn opacity_partners">
-                        <img class="btn__img" src="http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/left-arrow-1.png" alt="left_arrow"/>
+                        <img class="btn__img" src="<?php echo get_template_directory_uri();?>/assets/images/left-arrow.png" alt="left_arrow"/>
                     </button>
                 </div>
                 <div class="arrows__arrow">
                     <button id="next_partners" class="arrow__btn">
-                        <img class="btn__img" src="http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/right-arrow-1.png" alt="right_arrow"/>
+                        <img class="btn__img" src="<?php echo get_template_directory_uri();?>/assets/images/right-arrow.png" alt="right_arrow"/>
                     </button>
                 </div>
             </div>
@@ -63,5 +55,3 @@ $partners = get_field('partners');
     </div>
 
 </section>
-</body>
-</html>

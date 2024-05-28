@@ -1,23 +1,15 @@
-<!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/tecnologias_section.css">
-
-    <?php wp_head(); ?>
-</head>
-
-<body <?php body_class(); ?>>
 <?php
 // Obtener los campos de ACF.
 $titulo = get_field('titulo');
 $bloques = get_field('bloques');
 ?>
-
+<style>
+    .main__tecnologias {
+        background-image: url("<?php echo get_template_directory_uri();?>/assets/images/base_2.png");
+    }
+</style>
 <section class="main__tecnologias">
-    <img class="tecnologias__vector" src="http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/vector_blanco.png" alt="vector_blanco"/>
+    <img class="tecnologias__vector" src="<?php echo get_template_directory_uri();?>/assets/images/vector_blanco.png" alt="vector_blanco"/>
 
     <div class="tecnologias__container container">
         <div class="container__title">
@@ -47,7 +39,7 @@ $bloques = get_field('bloques');
                     <a class="button__enlace" href="<?php echo esc_url($enlace['url']); ?>">
                         <?php echo $enlace['title']; ?>
                         <img class="ampliar__row"
-                             src="http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/row.png"
+                             src="<?php echo get_template_directory_uri();?>/assets/images/row.png"
                              alt="flecha"/>
                     </a>
                 </div>
@@ -58,5 +50,3 @@ $bloques = get_field('bloques');
         </div>
     </div>
 </section>
-</body>
-</html>

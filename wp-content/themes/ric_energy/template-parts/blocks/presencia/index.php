@@ -1,15 +1,3 @@
-<!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/presencia_section.css">
-
-    <?php wp_head(); ?>
-</head>
-
-<body <?php body_class(); ?>>
 <?php
 // Obtener los campos de ACF.
 $titulo = get_field('titulo');
@@ -26,7 +14,7 @@ $bloques = get_field('bloques');
 
         <div class="presencia__sectionMapa">
             <div class="sectionMapa__containerMapa">
-                <img class="containerMapa__mapa" src="http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/map_countries.png" alt="mapa">
+                <img class="containerMapa__mapa" src="<?php echo get_template_directory_uri();?>/assets/images/map_countries.png" alt="mapa">
                 <?php
                 foreach ($bloques as $bloque) {
                 ?>
@@ -45,5 +33,3 @@ $bloques = get_field('bloques');
         </div>
     </div>
 </section>
-</body>
-</html>

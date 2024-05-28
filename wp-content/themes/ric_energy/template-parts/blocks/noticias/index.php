@@ -1,20 +1,8 @@
-<!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/noticias_section.css">
-
-    <?php wp_head(); ?>
-</head>
-
-<body <?php body_class(); ?>>
 <?php
 // Obtener los campos de ACF.
 $titulo = get_field('titulo');
 $enlace = get_field('enlace');
-$noticias = get_field('noticias');
+$query = new WP_Query(array('category_name' => 'Noticias', 'posts_per_page' => 6));
 ?>
 
 <section class="main__noticias">
@@ -29,7 +17,7 @@ $noticias = get_field('noticias');
                 <a class="bloqueLink__enlace" href="<?php echo esc_url($enlace['url']); ?>">
                     <?php echo $enlace['title']; ?>
                     <img class="noticias__row"
-                         src="http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/row.png"
+                         src="<?php echo get_template_directory_uri();?>/assets/images/row.png"
                          alt="flecha"/>
                 </a>
             </div>
@@ -37,51 +25,51 @@ $noticias = get_field('noticias');
 
         <div class="noticias__slider slider" data-aos="fade-up">
             <?php
-            foreach ($noticias as $noticia) {
-                ?>
-            <div class="slider__container">
-                <div class="container__newsInformation">
-                    <div class="newsInformation__encabezado">
-                        <p class="encabezado__comunicados">
-                            <?php echo $noticia['encabezado']; ?>
-                        </p>
+            if ($query->have_posts()) : ?>
+                <?php while ($query->have_posts()) : $query->the_post(); ?>
+                <div class="slider__container">
+                    <div class="container__newsInformation">
+                        <div class="newsInformation__encabezado">
+                            <p class="encabezado__comunicados">
+                                Noticias
+                            </p>
+                        </div>
+                        <div class="newsInformation__line"></div>
+                        <div class="newsInformation__date">
+                            <p class="date">
+                                <?php echo get_the_date('d/m/y'); ?>
+                            </p>
+                        </div>
                     </div>
-                    <div class="newsInformation__line"></div>
-                    <div class="newsInformation__date">
-                        <p class="date">
-                            <?php echo $noticia['fecha']; ?>
-                        </p>
-                    </div>
-                </div>
 
-                <div class="container__newsContent">
-                    <div class="newsContent__bloque">
-                        <?php echo $noticia['contenido']; ?>
-                    </div>
-                    <div class="newsContent__enlaceDiv">
-                        <a class="enlaceDiv__enlace" href="<?php echo esc_url($noticia['link']['url']); ?>">
-                            <style>
-                                .<?php echo $noticia['clase']; ?> {
-                                    background-image: url('<?php echo $noticia['imagen']['url']; ?>');
-                                }
-                            </style>
-                            <div class="enlace__img <?php echo $noticia['clase']; ?>">
-                                <div class="img__containerLink">
-                                    <button class="containerLink__leer">
-                                        <?php echo $noticia['link']['title']; ?>
-                                        <img class="leer__row"
-                                             src="http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/row.png"
-                                             alt="flecha"/>
-                                    </button>
-                                </div>
-                            </div>
-                        </a>
+                    <div class="container__newsContent">
+                        <div class="newsContent__bloque">
+                            <p class="bloque__newsParrafo">
+                                <?php echo the_title(); ?>
+                            </p>
+                        </div>
+                        <div class="newsContent__enlaceDiv">
+                            <a class="enlaceDiv__enlace" href="<?php echo the_permalink(); ?>">
+                                <?php if(has_post_thumbnail()): ?>
+                                    <div class="enlace__img" style="background-image: url('<?php the_post_thumbnail_url('medium_large'); ?>');">
+                                        <div class="img__containerLink">
+                                            <button class="containerLink__leer">
+                                                LEER MÁS
+                                                <img class="leer__row"
+                                                     src="<?php echo get_template_directory_uri();?>/assets/images/row.png"
+                                                     alt="flecha"/>
+                                            </button>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <?php
-            }
-            ?>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
+
         </div>
         <div class="noticias__controller">
             <div class="controller__progressBar">
@@ -95,17 +83,15 @@ $noticias = get_field('noticias');
             <div class="controller__panel">
                 <div class="arrows__btn">
                     <button id="prev_news" class="btn__flecha opacity_news">
-                        <img class="flecha__news" src="http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/left-arrow.png" alt="left_arrow"/>
+                        <img class="flecha__news" src="<?php echo get_template_directory_uri();?>/assets/images/black-left-arrow.png" alt="left_arrow"/>
                     </button>
                 </div>
                 <div class="arrows__btn">
                     <button id="next_news" class="btn__flecha">
-                        <img class="flecha__news" src="http://localhost/proyectos_wordpress/wordpress/wp-content/uploads/2024/05/right-arrow.png" alt="right_arrow"/>
+                        <img class="flecha__news" src="<?php echo get_template_directory_uri();?>/assets/images/black-right-arrow.png" alt="right_arrow"/>
                     </button>
                 </div>
             </div>
         </div>
     </div>
 </section>
-</body>
-</html>

@@ -17,6 +17,7 @@ function my_acf_init_block_types() {
             'category'          => 'ric_energy',
             'icon'              => 'media-text',
             'keywords'          => array( 'seccionppal_home', 'block' ),
+            'enqueue_style' => get_template_directory_uri() . '/assets/css/index_seccionppal.css',
         ));
 
         acf_register_block_type(array(
@@ -27,6 +28,7 @@ function my_acf_init_block_types() {
             'category'          => 'ric_energy',
             'icon'              => 'media-text',
             'keywords'          => array( 'somos', 'block' ),
+            'enqueue_style' => get_template_directory_uri() . '/assets/css/somos_section.css',
         ));
 
         acf_register_block_type(array(
@@ -36,8 +38,8 @@ function my_acf_init_block_types() {
             'render_template'   => 'template-parts/blocks/nosotros/index.php',
             'category'          => 'ric_energy',
             'icon'              => 'format-aside',
-//            'icon'              => 'media-text',
             'keywords'          => array( 'nosotros', 'block' ),
+            'enqueue_style' => get_template_directory_uri() . '/assets/css/nosotros_section.css',
         ));
 
         acf_register_block_type(array(
@@ -48,6 +50,7 @@ function my_acf_init_block_types() {
             'category'          => 'ric_energy',
             'icon'              => 'media-spreadsheet',
             'keywords'          => array( 'tecnologias', 'block' ),
+            'enqueue_style' => get_template_directory_uri() . '/assets/css/tecnologias_section.css',
         ));
 
         acf_register_block_type(array(
@@ -58,6 +61,7 @@ function my_acf_init_block_types() {
             'category'          => 'ric_energy',
             'icon'              => 'admin-site-alt',
             'keywords'          => array( 'presencia', 'block' ),
+            'enqueue_style' => get_template_directory_uri() . '/assets/css/presencia_section.css',
         ));
 
         acf_register_block_type(array(
@@ -68,6 +72,7 @@ function my_acf_init_block_types() {
             'category'          => 'ric_energy',
             'icon'              => 'slides',
             'keywords'          => array( 'partners', 'block' ),
+            'enqueue_style' => get_template_directory_uri() . '/assets/css/partners_section.css',
         ));
 
         acf_register_block_type(array(
@@ -78,6 +83,7 @@ function my_acf_init_block_types() {
             'category'          => 'ric_energy',
             'icon'              => 'slides',
             'keywords'          => array( 'noticias', 'block' ),
+            'enqueue_style' => get_template_directory_uri() . '/assets/css/noticias_section.css',
         ));
 
         acf_register_block_type(array(
@@ -88,6 +94,7 @@ function my_acf_init_block_types() {
             'category'          => 'ric_energy',
             'icon'              => 'testimonial',
             'keywords'          => array( 'contacto', 'block' ),
+            'enqueue_style' => get_template_directory_uri() . '/assets/css/contacto_section.css',
         ));
 
         // SALA DE PRENSA
@@ -100,6 +107,7 @@ function my_acf_init_block_types() {
             'category'          => 'ric_energy',
             'icon'              => 'media-text',
             'keywords'          => array( 'seccionppal_prensa', 'block' ),
+            'enqueue_style' => get_template_directory_uri() . '/assets/css/prensa_seccionppal.css',
         ));
 
         acf_register_block_type(array(
@@ -110,6 +118,7 @@ function my_acf_init_block_types() {
             'category'          => 'ric_energy',
             'icon'              => 'list-view',
             'keywords'          => array( 'listados', 'block' ),
+            'enqueue_style' => get_template_directory_uri() . '/assets/css/listados_section.css',
         ));
     }
 }
