@@ -1,7 +1,7 @@
 <?php
 // Obtener los campos de ACF.
-$noticias = get_field('noticias');
-$query = new WP_Query(array('category_name' => 'Noticias', 'posts_per_page' => 11));
+$titulo = get_field('titulo');
+$query = new WP_Query(array('category_name' => 'Noticias', 'posts_per_page' => 10));
 ?>
 <section class="main__bloqueListados">
     <div class="container">
@@ -23,11 +23,11 @@ $query = new WP_Query(array('category_name' => 'Noticias', 'posts_per_page' => 1
                         </h3>
                         <div class="listItem__imgBox">
                             <?php if(has_post_thumbnail()): ?>
-                            <div class="imgBox__contenedor">
-                                <img class="contenedor__img"
-                                     src="<?php the_post_thumbnail_url('medium_large')?>"
-                                     alt="<?php echo esc_attr(get_the_title()); ?>" />
-                            </div>
+                                <div class="imgBox__contenedor">
+                                    <img class="contenedor__img"
+                                         src="<?php the_post_thumbnail_url('medium_large')?>"
+                                         alt="<?php echo esc_attr(get_the_title()); ?>" />
+                                </div>
                             <?php endif; ?>
                         </div>
                         <a class="bloque__listLink" href="<?php echo the_permalink(); ?>"></a>
