@@ -2,7 +2,8 @@
 // Obtener los campos de ACF.
 $titulo = get_field('titulo');
 $enlace = get_field('enlace');
-$query = new WP_Query(array('category_name' => 'Noticias', 'posts_per_page' => 6));
+$relacionados = get_field('noticias');
+$query = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 6));
 ?>
 
 <section class="main__noticias">
@@ -25,49 +26,62 @@ $query = new WP_Query(array('category_name' => 'Noticias', 'posts_per_page' => 6
 
         <div class="noticias__slider slider" data-aos="fade-up">
             <?php
-            if ($query->have_posts()) : ?>
-                <?php while ($query->have_posts()) : $query->the_post(); ?>
-                <div class="slider__container">
-                    <div class="container__newsInformation">
-                        <div class="newsInformation__encabezado">
-                            <p class="encabezado__comunicados">
-                                Noticias
-                            </p>
+            if ($relacionados): ?>
+                <?php foreach ($relacionados as $post): ?>
+                    <div class="slider__container">
+                        <div class="container__newsInformation">
+                            <div class="newsInformation__encabezado">
+                                <p class="encabezado__comunicados">
+                                    Noticias
+                                </p>
+                            </div>
+                            <div class="newsInformation__line"></div>
+                            <div class="newsInformation__date">
+                                <p class="date">
+                                    <?php echo get_the_date('d/m/y', $post->ID); ?>
+                                </p>
+                            </div>
                         </div>
-                        <div class="newsInformation__line"></div>
-                        <div class="newsInformation__date">
-                            <p class="date">
-                                <?php echo get_the_date('d/m/y'); ?>
-                            </p>
-                        </div>
-                    </div>
 
-                    <div class="container__newsContent">
-                        <div class="newsContent__bloque">
-                            <p class="bloque__newsParrafo">
-                                <?php echo the_title(); ?>
-                            </p>
-                        </div>
-                        <div class="newsContent__enlaceDiv">
-                            <a class="enlaceDiv__enlace" href="<?php echo the_permalink(); ?>">
-                                <?php if(has_post_thumbnail()): ?>
-                                    <div class="enlace__img" style="background-image: url('<?php the_post_thumbnail_url('medium_large'); ?>');">
-                                        <div class="img__containerLink">
-                                            <button class="containerLink__leer">
-                                                LEER MÁS
-                                                <img class="leer__row"
-                                                     src="<?php echo get_template_directory_uri();?>/assets/images/row.png"
-                                                     alt="flecha"/>
-                                            </button>
+                        <div class="container__newsContent">
+                            <div class="newsContent__bloque">
+                                <p class="bloque__newsParrafo">
+                                    <?php
+                                    // Obtener y mostrar el título del post relacionado
+                                    echo get_the_title($post->ID);
+                                    ?>
+                                </p>
+                            </div>
+                            <div class="newsContent__enlaceDiv">
+                                <a class="enlaceDiv__enlace" href="<?php echo get_the_permalink($post->ID); // Obtener y mostrar el enlace del post relacionado ?>">
+                                    <?php if (has_post_thumbnail($post->ID)): ?>
+                                        <div class="enlace__img" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID, 'medium_large'); ?>');">
+                                            <div class="img__containerLink">
+                                                <button class="containerLink__leer">
+                                                    LEER MÁS
+                                                    <img class="leer__row"
+                                                         src="<?php echo get_template_directory_uri(); ?>/assets/images/row.png"
+                                                         alt="flecha"/>
+                                                </button>
+                                            </div>
                                         </div>
-                                    </div>
-                                <?php endif; ?>
-                            </a>
+                                    <?php else: // En caso de que no haya miniatura ?>
+                                        <div class="enlace__img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/default-image.png');">
+                                            <div class="img__containerLink">
+                                                <button class="containerLink__leer">
+                                                    LEER MÁS
+                                                    <img class="leer__row"
+                                                         src="<?php echo get_template_directory_uri(); ?>/assets/images/row.png"
+                                                         alt="flecha"/>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
+                <?php endforeach; ?>
             <?php endif; ?>
 
         </div>
